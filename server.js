@@ -10,17 +10,17 @@
 *
 ********************************************************************************/ 
 
-const express = require("express");
-const { sendFile } = require("express/lib/response");
-const path = require("path");
-const blog = require("./blog-service.js");
-const multer = require("multer");
-const cloudinary = require('cloudinary').v2
-const streamifier = require('streamifier')
-const exphbs = require("express-handlebars");
+const express = require('express');
+const multer = require('multer');
+const cloudinary = require('cloudinary').v2;
+const streamifier = require('streamifier');
+const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
 const stripJs = require('strip-js');
-const authData = require('./auth-service');
 
+const blog = require('./blog-service');
+const authData = require('./auth-service');
+const clientSessions = require('client-sessions');
 const app = express();
 
 const HTTP_PORT = process.env.PORT || 8080;
