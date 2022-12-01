@@ -1,14 +1,16 @@
 /*********************************************************************************
-*  WEB322 – Assignment 05
-*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part of this
-*  assignment has been copied manually or electronically from any other source (including web sites) or 
-*  distributed to other students.
-* 
-*  Name: ___Gauri Vashisth___________________ Student ID: __125068213____________ Date: __2022/11/18______________
+* WEB322 – Assignment 05
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part
+* of this assignment has been copied manually or electronically from any other source
+* (including 3rd party web sites) or distributed to other students.
 *
-*  Online (Cyclic) Link: _______https://easy-hare-flip-flops.cyclic.app_________________________________________________
+* Name: ___Belinda Jean Preeth Jerien____ Student ID: ___122442212__ Date: __Aug 04, 2022__
 *
-********************************************************************************/ 
+* Heroku App URL: https://belinda-web322-assignment6.herokuapp.com/
+*
+* GitHub Repository URL: https://github.com/belinda-1821/web322-app
+
+********************************************************************************/
 
 const express = require('express');
 const multer = require('multer');
@@ -22,17 +24,6 @@ const blog = require('./blog-service');
 const authData = require('./auth-service');
 const clientSessions = require('client-sessions');
 const app = express();
-
-const HTTP_PORT = process.env.PORT || 8080;
-
-cloudinary.config({
-  cloud_name: 'dxqx2qcex',
-  api_key: '927172296124669',
-  api_secret: 'LHCEL6qaUw5m5PXs0RZabmzHNSE',
-  secure: true
-});
-
-const upload = multer(); 
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -90,6 +81,16 @@ app.engine('.hbs', exphbs.engine({
     }
 }));
 app.set('view engine', '.hbs');
+
+// Cloudinary for image upload
+cloudinary.config({
+    cloud_name: 'dxqx2qcex',
+  api_key: '927172296124669',
+  api_secret: 'LHCEL6qaUw5m5PXs0RZabmzHNSE',
+    secure: true
+});
+
+const upload = multer();
 
 // View Path settings
 var path = require('path');
