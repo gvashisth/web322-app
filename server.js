@@ -24,6 +24,8 @@ const authData = require('./auth-service');
 const clientSessions = require('client-sessions');
 const app = express();
 
+const HTTP_PORT = process.env.PORT || 8080;
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
