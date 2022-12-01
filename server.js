@@ -1,16 +1,15 @@
 /*********************************************************************************
-* WEB322 – Assignment 05
-* I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part
-* of this assignment has been copied manually or electronically from any other source
-* (including 3rd party web sites) or distributed to other students.
+*  WEB322 – Assignment 06
+*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part of this
+*  assignment has been copied manually or electronically from any other source (including web sites) or 
+*  distributed to other students.
+* 
+*  Name: ______________________ Student ID: ______________ Date: ________________
 *
-* Name: ___Belinda Jean Preeth Jerien____ Student ID: ___122442212__ Date: __Aug 04, 2022__
+*  Online (Cyclic) Link: ________________________________________________________
 *
-* Heroku App URL: https://belinda-web322-assignment6.herokuapp.com/
-*
-* GitHub Repository URL: https://github.com/belinda-1821/web322-app
+********************************************************************************/ 
 
-********************************************************************************/
 
 const express = require('express');
 const multer = require('multer');
