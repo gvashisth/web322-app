@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-var sequelize = new Sequelize('cjcggvzq', 'cjcggvzq', 'YxupEhS_br68-guFcTqU0MXHrR5zHBRn', {
+var sequelize = new Sequelize('cjcggvzq', 'cjcggvzq', 'slHGhCH0fNInT6nLIrA6I5C9N88zN_Cn', {
     host: 'lucky.db.elephantsql.com ',
     dialect: 'postgres',
     port: 5432,
