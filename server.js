@@ -24,8 +24,6 @@ const authData = require('./auth-service');
 const clientSessions = require('client-sessions');
 const app = express();
 
-const HTTP_PORT = process.env.PORT || 8080;
-
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -86,8 +84,8 @@ app.set('view engine', '.hbs');
 // Cloudinary for image upload
 cloudinary.config({
     cloud_name: 'dxqx2qcex',
-  api_key: '927172296124669',
-  api_secret: 'LHCEL6qaUw5m5PXs0RZabmzHNSE',
+    api_key: '927172296124669',
+    api_secret: 'LHCEL6qaUw5m5PXs0RZabmzHNSE',
     secure: true
 });
 
