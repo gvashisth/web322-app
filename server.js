@@ -6,7 +6,7 @@
 * 
 *  Name: ___Gauri Vashisth___________________ Student ID: __12506823____________ Date: __2022-12-01______________
 *
-*  Online (Cyclic) Link: ________________________________________________________
+*  Online (Cyclic) Link: _____https://drab-erin-brown-bear-cape.cyclic.app___________________________________________________
 *
 ********************************************************************************/ 
 
@@ -50,7 +50,7 @@ function ensureLogin(req, res, next) {
     }
 }
 
-// Handlebar setup and custom helpers
+
 app.engine('.hbs', exphbs.engine({
     extname: '.hbs',
     helpers: {
@@ -81,7 +81,7 @@ app.engine('.hbs', exphbs.engine({
 }));
 app.set('view engine', '.hbs');
 
-// Cloudinary for image upload
+
 cloudinary.config({
     cloud_name: 'dxqx2qcex',
     api_key: '927172296124669',
@@ -91,11 +91,11 @@ cloudinary.config({
 
 const upload = multer();
 
-// View Path settings
+
 var path = require('path');
 var views = path.join(__dirname, 'views');
 
-// Starting Server
+
 blog.initialize()
     .then(authData.initialize)
     .then(function () {
@@ -109,7 +109,7 @@ blog.initialize()
 
 app.use(express.static('public'));
 
-// Set Active Route Style
+
 app.use(function (req, res, next) {
     let route = req.path.substring(1);
     app.locals.activeRoute = (route == "/") ? "/" : "/" + route.replace(/\/(.*)/, "");
@@ -117,7 +117,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-// Routes
+
 app.get('/', (req, res) => {
     res.redirect('/blog');
 });
@@ -126,7 +126,7 @@ app.get('/about', (req, res) => {
     res.render('about')
 });
 
-// Post Routes
+
 app.get('/posts/add', ensureLogin, (req, res) => {
     blog.getCategories().then((data) => {
         res.render('addPost', {
@@ -339,7 +339,7 @@ app.get('/blog', async (req, res) => {
 
 });
 
-// Category Routes
+
 
 app.get('/categories', ensureLogin, (req, res) => {
     blog.getCategories().then((data) => {
@@ -381,7 +381,7 @@ app.get('/categories/delete/:id', ensureLogin, (req, res) => {
 });
 
 
-// Login Route
+
 
 app.get("/login", (req, res) => {
     res.render('login');

@@ -9,7 +9,7 @@ var sequelize = new Sequelize('ymilngyv', 'ymilngyv', 'ZP84OFOTJlh7IjOSB_QWZBCWo
     query: { raw: true }
 });
 
-// Post Model
+
 
 var Post = sequelize.define('Post', {
     title: Sequelize.STRING,
@@ -19,13 +19,13 @@ var Post = sequelize.define('Post', {
     published: Sequelize.BOOLEAN
 });
 
-// Category Model
+
 
 var Category = sequelize.define('Category', {
     category: Sequelize.STRING
 });
 
-// Model Relationship
+
 Post.belongsTo(Category, { foreignKey: 'category' });
 
 module.exports.initialize = function () {
